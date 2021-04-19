@@ -1,11 +1,12 @@
 # HandyMama
 ##Project Details:
-    npm start: node backend/server
-    npm run server: nodemon backend/server
-    npm run client: npm start --prefix frontend
-    npm run dev: concurrently npm run server npm run client
-    npm run data:import: node backend seeder
-    npm run data:destroy: node backend/seeder -d
-    heroku-postbuild: NPM_CONFIG_PRODUCTION=false npm install --prefix frontend && npm run build --prefix fronten
-  use DB: Mongodb
+    1.npm start: node backend/server 
+    2.npm run server: nodemon backend/server
+    3.npm run client: npm start --prefix frontend
+    4.npm run dev: concurrently npm run server npm run client
+    5.npm run data:import: node backend seeder
+    6.npm run data:destroy: node backend/seeder -d
+    7.heroku-postbuild: NPM_CONFIG_PRODUCTION=false npm install --prefix frontend && npm run build --prefix fronten
+  #Use DB: Mongodb
+  
 ### Live Link:https://handymamaapp.herokuapp.com/
