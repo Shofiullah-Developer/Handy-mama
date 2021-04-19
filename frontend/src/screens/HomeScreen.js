@@ -1,0 +1,68 @@
+import React, { useEffect } from 'react'
+import { Link } from 'react-router-dom'
+import { useDispatch, useSelector } from 'react-redux'
+import { Row, Col } from 'react-bootstrap'
+import Service from '../components/Service'
+import Message from '../components/Message'
+import Loader from '../components/Loader'
+import Paginate from '../components/Paginate'
+import ServiceCarousel from '../components/ServiceCarousel'
+import Meta from '../components/Meta'
+import WhyChooseUs from '../components/WhyChooseUs'
+import HomeService from '../components/HomeService'
+import Faq from '../components/Faq'
+import { listServices } from '../actions/serviceActions'
+
+const HomeScreen = ({ match }) => {
+  const keyword = match.params.keyword
+
+  const pageNumber = match.params.pageNumber || 1
+
+  const dispatch = useDispatch()
+
+  const serviceList = useSelector((state) => state.serviceList)
+  const { loading, error, services, page, pages } = serviceList
+
+  useEffect(() => {
+    dispatch(listServices(keyword, pageNumber))
+  }, [dispatch, keyword, pageNumber])
+
+  return (
+    <>
+      <Meta />
+      {!keyword ? (
+        <ServiceCarousel />
+      ) : (
+        <Link to='/' className='btn btn-light'>
+          Go Back
+        </Link>
+      )}
+      <h1>Our Services</h1>
+      {loading ? (
+        <Loader />
+      ) : error ? (
+        <Message variant='danger'>{error}</Message>
+      ) : (
+        <>
+          <Row>
+            {services.map((service) => (
+              <Col key={service._id} sm={12} md={6} lg={4} xl={3}>
+                <Service service={service} />
+              </Col>
+            ))}
+          </Row>
+          <WhyChooseUs />
+           <HomeService />
+          <Faq /> 
+          <Paginate
+            pages={pages}
+            page={page}
+            keyword={keyword ? keyword : ''}
+          />
+        </>
+      )}
+    </>
+  )
+}
+
+export default HomeScreen
