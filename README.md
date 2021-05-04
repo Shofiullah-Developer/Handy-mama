@@ -8,9 +8,10 @@
     2.React Router
     3.Node js
     4.Exprees js
-    5.React bootsrap
-    6.Google Firebase Authentication
-    7.HTML and CSS
-    8.Heroku
+    5.MongoDB
+    6.React bootsrap
+    7.Google Firebase Authentication
+    8.HTML and CSS
+    9.Heroku
   
 ### Live Link:https://handymamaapp.herokuapp.com/
