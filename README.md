@@ -1,12 +1,16 @@
 # HandyMama
 ## Project Details:
-    1.npm start: node backend/server 
-    2.npm run server: nodemon backend/server
-    3.npm run client: npm start --prefix frontend
-    4.npm run dev: concurrently npm run server npm run client
-    5.npm run data:import: node backend seeder
-    6.npm run data:destroy: node backend/seeder -d
-    7.heroku-postbuild: NPM_CONFIG_PRODUCTION=false npm install --prefix frontend && npm run build --prefix fronten
-  # Use DB: Mongodb
+    • It is a MERN stack web application where you can order grocery items online easily.
+    • It is authenticated with firebase. If user click on buy now button user will be redirected to login page and after login user can buy products.
+    • User can see his/her order as a consumer and user can add, manage product to his/her shop as an admin.
+## Uses Tecknology:
+    1.React js
+    2.React Router
+    3.Node js
+    4.Exprees js
+    5.React bootsrap
+    6.Google Firebase Authentication
+    7.HTML and CSS
+    8.Heroku
   
 ### Live Link:https://handymamaapp.herokuapp.com/
