@@ -14,4 +14,4 @@
     8.HTML and CSS
     9.Heroku
   
-### Live Link:https://handymamaapp.herokuapp.com/
+### Live Link:https://handymama.herokuapp.com/
